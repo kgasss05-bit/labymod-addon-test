@@ -1,2 +1,2 @@
-
-rootProject.name = "AutoSubtitleAddon"
+rootProject.name = "labymod-addon-test"
+include("core")

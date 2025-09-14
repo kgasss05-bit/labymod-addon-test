@@ -1,0 +1,7 @@
+{
+  "name": "AutoSubtitle",
+  "version": "1.0.0",
+  "author": "Villager_Horst",
+  "minecraft": "1.21.5",
+  "description": "Skeleton build that compiles without external APIs."
+}

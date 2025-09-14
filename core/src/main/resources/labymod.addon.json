@@ -1,0 +1,10 @@
+
+{
+  "namespace": "autosubtitle",
+  "name": "Auto Subtitle Addon",
+  "displayName": "Auto Subtitle Addon",
+  "author": "Villager_Horst",
+  "version": "1.0.0",
+  "minecraft": "1.21.5",
+  "description": "Shows a countdown timer like 1y 7M 8d 23h 34m 59s left."
+}

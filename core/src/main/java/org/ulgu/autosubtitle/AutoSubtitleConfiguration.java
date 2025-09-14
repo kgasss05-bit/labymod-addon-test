@@ -1,49 +1,32 @@
 package org.ulgu.autosubtitle;
 
-import net.labymod.api.client.gui.screen.widget.widgets.input.slider.SliderSetting;
-import net.labymod.api.configuration.loader.property.ConfigProperty;
+import net.labymod.api.addon.AddonConfig;
+import net.labymod.api.addon.annotation.AddonMain;
+import net.labymod.api.client.gui.screen.widget.widgets.input.settings.IntegerSetting;
 
-public class AutoSubtitleConfiguration {
+@AddonMain
+public class AutoSubtitleConfiguration extends AddonConfig {
 
-  @SliderSetting(min = 0, max = 10)
-  private final ConfigProperty<Integer> years = new ConfigProperty<>(1);
+  @IntegerSetting(min = 0, max = 10)
+  private int subtitleSpeed;
 
-  @SliderSetting(min = 0, max = 12)
-  private final ConfigProperty<Integer> months = new ConfigProperty<>(7);
+  @IntegerSetting(min = 0, max = 12)
+  private int subtitleSize;
 
-  @SliderSetting(min = 0, max = 365)
-  private final ConfigProperty<Integer> days = new ConfigProperty<>(8);
+  @IntegerSetting(min = 0, max = 365)
+  private int subtitleLifetime;
 
-  @SliderSetting(min = 0, max = 24)
-  private final ConfigProperty<Integer> hours = new ConfigProperty<>(23);
+  @IntegerSetting(min = 0, max = 24)
+  private int subtitleHours;
 
-  @SliderSetting(min = 0, max = 60)
-  private final ConfigProperty<Integer> minutes = new ConfigProperty<>(34);
+  @IntegerSetting(min = 0, max = 60)
+  private int subtitleMinutes;
 
-  @SliderSetting(min = 0, max = 60)
-  private final ConfigProperty<Integer> seconds = new ConfigProperty<>(59);
+  @IntegerSetting(min = 0, max = 60)
+  private int subtitleSeconds;
 
-  public ConfigProperty<Integer> years() {
-    return years;
-  }
-
-  public ConfigProperty<Integer> months() {
-    return months;
-  }
-
-  public ConfigProperty<Integer> days() {
-    return days;
-  }
-
-  public ConfigProperty<Integer> hours() {
-    return hours;
-  }
-
-  public ConfigProperty<Integer> minutes() {
-    return minutes;
-  }
-
-  public ConfigProperty<Integer> seconds() {
-    return seconds;
+  @Override
+  public String getNamespace() {
+    return "autosubtitle";
   }
 }
